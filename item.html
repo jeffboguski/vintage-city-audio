@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gear Detail — Vintage City Audio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <span class="brand-tag">Amps &middot; Guitars &middot; Gear</span>
+    </a>
+    <button class="nav-toggle" id="navToggle">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="inventory.html" class="active">Inventory</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="wrap" id="itemRoot" style="padding-top:34px;">
+  <div class="empty-state">Loading&hellip;</div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <p style="max-width:320px; margin-top:10px; color:#a89a7d; font-size:.9rem;">Vintage amps, guitars, and gear — bought, sold, and kept honest about condition.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:jeffboguski@gmail.com" data-contact-email>Email VCA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; <span id="year"></span> Vintage City Audio. All gear sold as-is unless noted.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/app.js"></script>
+</body>
+</html>

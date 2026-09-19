@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Vintage City Audio</title>
+<meta name="description" content="Vintage City Audio is a New York-based collection of vintage tube amps, guitars, and gear — bought, sold, and understood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <span class="brand-tag">Amps &middot; Guitars &middot; Gear</span>
+    </a>
+    <button class="nav-toggle" id="navToggle">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="inventory.html">Inventory</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--brass); font-family:'Oswald',sans-serif; letter-spacing:.18em; text-transform:uppercase; font-size:.75rem;">About</div>
+    <h1 style="max-width:720px;">Gear that gets played, checked, and understood before it's sold.</h1>
+  </div>
+</section>
+
+<section class="tight section-alt">
+  <div class="wrap about-grid">
+    <div>
+      <h2>Our Story</h2>
+      <p>Vintage City Audio started the way most good gear collections do — one amp at a time, because it was worth saving, not because it was worth flipping. New York-based, hands-on, and built around a working knowledge of what actually makes a vintage tube circuit sound the way it does.</p>
+      <p>What comes through VCA has been played, opened up, and looked over — not just wiped down and photographed. When something needs work before it's ready to sell, that work gets done or you're told exactly what's outstanding. No surprises when it shows up.</p>
+    </div>
+    <div>
+      <h2>How We Work</h2>
+      <ul class="value-list">
+        <li>
+          <h4>Hands-On, Not Just Listed</h4>
+          <p>Every piece gets played and checked before it's posted — not just described from a spec sheet.</p>
+        </li>
+        <li>
+          <h4>Honest Condition Notes</h4>
+          <p>Dings, mods, and wear get called out up front. What you see in the listing is what you get in hand.</p>
+        </li>
+        <li>
+          <h4>Full Specs, Every Time</h4>
+          <p>Serial numbers, wood, hardware, tube complement — the details that actually matter to a player or collector.</p>
+        </li>
+        <li>
+          <h4>Local Pickup or Shipped Right</h4>
+          <p>Based in New York City. Local pickup is easy to arrange, and gear that ships gets packed like it matters.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Contact</h2>
+        <p>Interested in a piece, have something to sell, or just want to talk shop about vintage tube amps? Reach out.</p>
+      </div>
+    </div>
+    <div class="category-strip">
+      <div class="category-card">
+        <span class="num">Email</span>
+        <h3>Send a Message</h3>
+        <p><a class="btn btn-dark btn-block" href="mailto:jeffboguski@gmail.com" data-contact-email style="margin-top:10px;">Email VCA</a></p>
+      </div>
+      <div class="category-card">
+        <span class="num">Marketplace</span>
+        <h3>Also Listed On</h3>
+        <p>Current pieces are cross-listed on Facebook Marketplace and Reverb — links are on each inventory page.</p>
+      </div>
+      <div class="category-card">
+        <span class="num">Location</span>
+        <h3>New York City</h3>
+        <p>Local pickup available on request; shipping arranged for out-of-town buyers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <p style="max-width:320px; margin-top:10px; color:#a89a7d; font-size:.9rem;">Vintage amps, guitars, and gear — bought, sold, and kept honest about condition.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:jeffboguski@gmail.com" data-contact-email>Email VCA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; <span id="year"></span> Vintage City Audio. All gear sold as-is unless noted.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/app.js"></script>
+</body>
+</html>

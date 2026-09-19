@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vintage City Audio — Vintage Amps, Guitars &amp; Gear</title>
+<meta name="description" content="Vintage City Audio deals in vintage tube amplifiers, guitars, and gear — curated, restored where it counts, and sold straight from the collection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <span class="brand-tag">Amps &middot; Guitars &middot; Gear</span>
+    </a>
+    <button class="nav-toggle" id="navToggle">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="inventory.html">Inventory</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">New York City</div>
+    <h1>Vintage Tube Amps, Guitars &amp; Gear — Bought, Sold, and Understood.</h1>
+    <p>Vintage City Audio is a working collection, not a warehouse. Every amp gets played, every spec gets checked, and every listing tells you exactly what you're getting.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="inventory.html">Browse Inventory</a>
+      <a class="btn btn-outline" href="about.html">About VCA</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Shop by Category</span>
+        <h2>What's Moving Through the Shop</h2>
+      </div>
+      <a class="btn btn-dark" href="inventory.html">View All &rarr;</a>
+    </div>
+    <div class="category-strip">
+      <a class="category-card" href="inventory.html?cat=Amps">
+        <span class="num">01</span>
+        <h3>Amps</h3>
+        <p>Vintage tube heads, combos, and cabinets — restored and evaluated on the bench, not just wiped down.</p>
+      </a>
+      <a class="category-card" href="inventory.html?cat=Guitars">
+        <span class="num">02</span>
+        <h3>Guitars</h3>
+        <p>Electrics worth keeping — clean examples with honest condition notes and full specs.</p>
+      </a>
+      <a class="category-card" href="inventory.html?cat=Effects">
+        <span class="num">03</span>
+        <h3>Effects &amp; Gear</h3>
+        <p>Pedals, tubes, and the odds and ends that round out a working rig.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Just Listed</span>
+        <h2>Currently For Sale</h2>
+      </div>
+      <a class="btn btn-dark" href="inventory.html">Full Inventory &rarr;</a>
+    </div>
+    <div class="inv-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="stat-row">
+      <div class="stat"><span class="n">100%</span><span class="l">Hands-On Checked</span></div>
+      <div class="stat"><span class="n">NYC</span><span class="l">Local Pickup Available</span></div>
+      <div class="stat"><span class="n">Full</span><span class="l">Specs on Every Listing</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <p style="max-width:320px; margin-top:10px; color:#a89a7d; font-size:.9rem;">Vintage amps, guitars, and gear — bought, sold, and kept honest about condition.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:jeffboguski@gmail.com" data-contact-email>Email VCA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; <span id="year"></span> Vintage City Audio. All gear sold as-is unless noted.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/app.js"></script>
+</body>
+</html>

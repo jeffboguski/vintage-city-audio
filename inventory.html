@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory — Vintage City Audio</title>
+<meta name="description" content="Browse current vintage amps, guitars, and gear for sale at Vintage City Audio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <span class="brand-tag">Amps &middot; Guitars &middot; Gear</span>
+    </a>
+    <button class="nav-toggle" id="navToggle">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="inventory.html" class="active">Inventory</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The Shop</span>
+        <h2>Inventory</h2>
+        <p>Everything currently for sale. Tap a piece for full specs, condition notes, and a sound demo where we've got one.</p>
+      </div>
+    </div>
+    <div class="filters" id="invFilters"></div>
+    <div class="inv-grid" id="invGrid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <span class="brand-mark">Vintage City <span>Audio</span></span>
+      <p style="max-width:320px; margin-top:10px; color:#a89a7d; font-size:.9rem;">Vintage amps, guitars, and gear — bought, sold, and kept honest about condition.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:jeffboguski@gmail.com" data-contact-email>Email VCA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; <span id="year"></span> Vintage City Audio. All gear sold as-is unless noted.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="js/app.js"></script>
+<script>
+  // Support inventory.html?cat=Amps deep links from the homepage category cards.
+  document.addEventListener("DOMContentLoaded", () => {
+    const cat = new URLSearchParams(window.location.search).get("cat");
+    if (!cat) return;
+    const tryClick = () => {
+      const btn = document.querySelector(`.filter-btn[data-cat="${cat}"]`);
+      if (btn) btn.click();
+      else if (document.getElementById("invFilters").children.length === 0) setTimeout(tryClick, 50);
+    };
+    setTimeout(tryClick, 50);
+  });
+</script>
+</body>
+</html>
