@@ -20,7 +20,18 @@
       "Condition": "Mint",
       "Case": "Original Dean Hard Shell Case"
     },
-    "images": [],
+    "images": [
+      "assets/img/dean-korina-v-2.jpg",
+      "assets/img/dean-korina-v-1.jpg",
+      "assets/img/dean-korina-v-3.jpg",
+      "assets/img/dean-korina-v-4.jpg",
+      "assets/img/dean-korina-v-5.jpg",
+      "assets/img/dean-korina-v-6.jpg",
+      "assets/img/dean-korina-v-7.jpg",
+      "assets/img/dean-korina-v-8.jpg",
+      "assets/img/dean-korina-v-9.jpg",
+      "assets/img/dean-korina-v-10.jpg"
+    ],
     "soundDemo": null,
     "externalListing": {
       "platform": "Facebook Marketplace",
@@ -76,7 +87,18 @@
       "Strings": "9-42",
       "Case": "Original Hard Shell Case"
     },
-    "images": [],
+    "images": [
+      "assets/img/fender-offset-tele-2.jpg",
+      "assets/img/fender-offset-tele-1.jpg",
+      "assets/img/fender-offset-tele-3.jpg",
+      "assets/img/fender-offset-tele-4.jpg",
+      "assets/img/fender-offset-tele-5.jpg",
+      "assets/img/fender-offset-tele-6.jpg",
+      "assets/img/fender-offset-tele-7.jpg",
+      "assets/img/fender-offset-tele-8.jpg",
+      "assets/img/fender-offset-tele-9.jpg",
+      "assets/img/fender-offset-tele-10.jpg"
+    ],
     "soundDemo": null,
     "externalListing": {
       "platform": "Facebook Marketplace",
