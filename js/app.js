@@ -176,10 +176,39 @@ async function initItemPage() {
     ? `<a class="btn btn-outline-dark" href="${item.externalListing.url}" target="_blank" rel="noopener">View on ${escapeHtml(item.externalListing.platform)} &rarr;</a>`
     : "";
 
+  const hasGallery = item.images && item.images.length > 1;
+  const galleryMarkup = `
+    <div class="item-gallery">
+      <div class="item-media" id="itemMedia">
+        ${
+          item.images && item.images.length
+            ? `<img id="mainPhoto" src="${item.images[0]}" alt="${escapeHtml(item.title)}">
+               ${hasGallery ? `
+                 <button class="gallery-nav prev" type="button" aria-label="Previous photo">&#8249;</button>
+                 <button class="gallery-nav next" type="button" aria-label="Next photo">&#8250;</button>
+                 <span class="gallery-count" id="galleryCount">1 / ${item.images.length}</span>
+               ` : ""}`
+            : mediaMarkup(item)
+        }
+      </div>
+      ${
+        hasGallery
+          ? `<div class="thumb-strip" id="thumbStrip">
+               ${item.images
+                 .map(
+                   (src, i) =>
+                     `<button class="thumb${i === 0 ? " active" : ""}" type="button" data-index="${i}"><img src="${src}" alt="${escapeHtml(item.title)} photo ${i + 1}"></button>`
+                 )
+                 .join("")}
+             </div>`
+          : ""
+      }
+    </div>`;
+
   root.innerHTML = `
     <div class="breadcrumb"><a href="inventory.html">Inventory</a> / ${escapeHtml(item.category)} / ${escapeHtml(item.title)}</div>
     <div class="item-hero">
-      <div class="item-media">${mediaMarkup(item)}</div>
+      ${galleryMarkup}
       <div class="item-info">
         <span class="eyebrow">${escapeHtml(item.category)}${item.year ? " · " + item.year : ""}</span>
         <h1>${escapeHtml(item.title)}</h1>
@@ -215,6 +244,41 @@ async function initItemPage() {
       <div class="demo-box">${demoMarkup}</div>
     </section>
   `;
+
+  if (hasGallery) {
+    initGallery(root, item.images);
+  }
+}
+
+// ---- item detail photo gallery (thumbnails + prev/next) -------------------
+function initGallery(root, images) {
+  const mainPhoto = root.querySelector("#mainPhoto");
+  const thumbStrip = root.querySelector("#thumbStrip");
+  const countLabel = root.querySelector("#galleryCount");
+  const prevBtn = root.querySelector(".gallery-nav.prev");
+  const nextBtn = root.querySelector(".gallery-nav.next");
+  let index = 0;
+
+  function show(i) {
+    index = (i + images.length) % images.length;
+    mainPhoto.src = images[index];
+    if (countLabel) countLabel.textContent = `${index + 1} / ${images.length}`;
+    if (thumbStrip) {
+      thumbStrip.querySelectorAll(".thumb").forEach((btn, btnIndex) => {
+        btn.classList.toggle("active", btnIndex === index);
+      });
+    }
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", () => show(index - 1));
+  if (nextBtn) nextBtn.addEventListener("click", () => show(index + 1));
+  if (thumbStrip) {
+    thumbStrip.addEventListener("click", (e) => {
+      const btn = e.target.closest(".thumb");
+      if (!btn) return;
+      show(Number(btn.dataset.index));
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
